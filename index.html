@@ -384,12 +384,14 @@
             }
         }
         video {
-            width: 100%;
-            max-width: 720px;
-            border-radius: 10px;
-            border: 2px solid var(--gold);
-            background: #000;
-        }
+    width: 100%;
+    max-width: 720px;
+    max-height: 80vh;          /* 限制最大高度为视口高度的80%，防止溢出 */
+    height: auto;              /* 保持宽高比，自动调整高度 */
+    border-radius: 10px;
+    border: 2px solid var(--gold);
+    background: #000;
+}
         .seal {
             display: inline-block;
             background: #b01f24;
@@ -458,7 +460,7 @@
         </p>
         <div class="card" style="text-align:center;">
             <h3>纪念短片 · 直接观看</h3>
-            <video id="memVideo" controls playsinline preload="none" src="https://pan325.github.io/hp12/video.mp4"></video>
+            <video id="memVideo" controls playsinline src="https://pan325.github.io/hp12/video.mp4"></video>
             <div style="margin-top:16px;">
                 <button class="btn small" style="margin-left:10px;" onclick="replay()">回到开头</button>
             </div>
