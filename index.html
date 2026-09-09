@@ -374,13 +374,34 @@
             gap: 16px;
         }
         @media(max-width:680px) {
-            .twocol {
-                grid-template-columns: 1fr;
-            }
-            .poetry {
-                font-size: 17px;
-            }
-        }
+    .twocol {
+        grid-template-columns: 1fr;
+    }
+    .poetry {
+        font-size: 17px;
+    }
+
+    /* 新增：手机端诗句排序的行布局优化 */
+    .orderline {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 8px;
+    }
+    .orderline span:first-child {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+    .orderline span:last-child {
+        flex: 0 0 auto;
+    }
+    .mvbtn {
+        font-size: 12px;
+        padding: 3px 8px;
+        margin: 0 2px;
+    }
+}
         video {
     width: 100%;
     max-width: 720px;
